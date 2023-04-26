@@ -1,0 +1,24 @@
+trigger:
+ - master
+steps:
+- task: JFrogNpm@1
+  inputs:
+    command: 'install'
+    artifactoryConnection: 'dineshk'
+    sourceRepo: 'dinesh-npm-remote'
+    workingFolder: 'json-schema/'
+    arguments: '--loglevel verbose'
+    collectBuildInfo: true
+    threads: '1'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'dineshk'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+- task: JFrogBuildScan@1
+  inputs:
+        xrayConnection: 'dineshk-xray'
+        buildName: '$(Build.DefinitionName)'
+        buildNumber: '$(Build.BuildNumber)'
