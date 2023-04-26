@@ -6,7 +6,6 @@ steps:
     command: 'install'
     artifactoryConnection: 'dineshk'
     sourceRepo: 'dinesh-npm-remote'
-    workingFolder: 'json-schema/'
     arguments: '--loglevel verbose'
     collectBuildInfo: true
     threads: '1'
