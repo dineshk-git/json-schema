@@ -1,6 +1,6 @@
 {
   "name": "testnpmbuilds",
-  "version": "1.0.0-ot",
+  "version": "1.0.0",
   "description”: “Testing npm builds",
   "main": "index.js",
   "scripts": {
