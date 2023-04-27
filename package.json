@@ -8,7 +8,7 @@
     "publish-this": "npm publish ",
     "publish-deep": "npm run no-publish -- --json  & npm run inbetween",
     "inbetween": "npm run publish-this",
-    "no-publish-deep": "npm run no-publish -- --json",
+    "no-publish-deep": "npm run no-publish -- --json"
   },
   "author": "",
   "license": "ISC",
