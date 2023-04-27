@@ -1,24 +1,18 @@
 {
-  "name": "json-schema",
-  "version": "0.2.3",
-  "author": "Kris Zyp",
-  "description": "JSON Schema validation and specifications",
-  "maintainers":[
-  	{"name": "Kris Zyp", "email": "kriszyp@gmail.com"}],
-  "keywords": [
-    "json",
-    "schema"
-  ],
-  "files": [
-    "lib"
-  ],
-  "license": "(AFL-2.1 OR BSD-3-Clause)",
-  "repository": {
-    "type":"git",
-    "url":"http://github.com/kriszyp/json-schema"
+  "name": "testnpmbuilds",
+  "version": "1.0.0-ot",
+  "description”: “Testing npm builds",
+  "main": "index.js",
+  "scripts": {
+    "no-publish": "npm config list",
+    "publish-this": "npm publish ",
+    "publish-deep": "npm run no-publish -- --json  & npm run inbetween",
+    "inbetween": "npm run publish-this",
+    "no-publish-deep": "npm run no-publish -- --json"
   },
-  "directories": { "lib": "./lib" },
-  "main": "./lib/validate.js",
-  "devDependencies": { "vows": "*" },
-  "scripts": { "test": "vows --spec test/*.js" }
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-schema": "0.2.3"
+  }
 }
